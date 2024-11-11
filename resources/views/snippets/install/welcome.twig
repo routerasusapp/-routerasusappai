@@ -1,0 +1,21 @@
+<x-form>
+    <form class="flex flex-col gap-8" @submit.prevent="viewRequirement()">
+        <h1>Aikeedo Installation</h1>
+
+        <p class="text-intermediate-content">
+			<a style="color:red;" href="https://weadown.com" target="_blank">weadown.com</a>
+        </p>
+
+        <p class="flex items-center gap-2 text-sm text-intermediate-content">
+            Installation process is very easy and it takes less than a minute!
+            <i class="text-xl ti ti-sparkles text-success"></i>
+        </p>
+
+        <button type="submit" class="w-full button group"
+            :processing="isProcessing">
+            {% include "snippets/spinner.twig" %}
+
+            Start installation
+        </button>
+    </form>
+</x-form>
